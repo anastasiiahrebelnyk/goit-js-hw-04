@@ -1,17 +1,14 @@
+
 function calcAverageCalories(days) {
-    const caloreiesPerDay = Object.values(days);
-    let total = 0;
-    for (const day of caloreiesPerDay) {
-        total += day.calories;
-        
-    }
-    const average = Math.round(total / (caloreiesPerDay.length));
-    if (isNaN(average)) {
-        return 0;
-    } else {
-        return average;
-    }
-    
+   if (days.length === 0) {
+    return 0;
+  }
+  let total = 0;
+  for (const day of days) {
+    total += day.calories;
+  }
+  const average = Math.round(total / (days.length));
+  return average;
 }
 
 
